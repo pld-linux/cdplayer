@@ -16,8 +16,8 @@ cdplayer is simple, non-interactive CD Player for Linux with "Random
 Play" and "Loop Play" options.
 
 %description -l pl
-cdplayer to prosty, nieinteraktywny odtwarzacz p³yt kompaktowych
-z opcj± losowego odgrywania ¶cie¿ek lub odrywania ca³ej p³yty w kó³ko. 
+cdplayer to prosty, nieinteraktywny odtwarzacz p³yt kompaktowych z
+opcj± losowego odgrywania ¶cie¿ek lub odrywania ca³ej p³yty w kó³ko.
 
 %prep
 %setup -q
