@@ -2,7 +2,7 @@ Summary:	Non-interactive CD Player
 Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	20020811
-Release:	1
+Release:	2
 Epoch:		2
 License:	GPL
 Group:		Applications/Sound
@@ -39,7 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README
 %attr(755,root,root) %{_bindir}/cdplayer
 %dir %{_datadir}/cdplayer
 %{_datadir}/cdplayer/cdplayer.htm
