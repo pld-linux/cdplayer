@@ -2,7 +2,7 @@ Summary:	Non-interactive CD Player
 Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	0.0.96
-Release:	1
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
