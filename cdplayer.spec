@@ -1,7 +1,7 @@
 Summary:	Non-interactive CD Player
 Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
-Version:	0.0.95
+Version:	0.0.96
 Release:	1
 Epoch:		1
 License:	GPL
@@ -37,16 +37,12 @@ install cdplayer.htm $RPM_BUILD_ROOT%{_datadir}/cdplayer/cdplayer.htm
 install cdplayer.1 $RPM_BUILD_ROOT%{_mandir}/man1/cdplayer.1
 install pl/cdplayer.1 $RPM_BUILD_ROOT%{_mandir}/pl/man1/cdplayer.1
 
-gzip -9nf ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/cdplayer
+%{_datadir}/cdplayer
 %{_mandir}/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
-%doc *.gz
-%dir %{_datadir}/cdplayer
-%{_datadir}/cdplayer/cdplayer.htm
