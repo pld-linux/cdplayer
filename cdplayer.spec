@@ -8,9 +8,9 @@ Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.tar.bz2
+URL:		http://www.mat.uni.torun.pl/~witek/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveOS:	Linux
-URL:		http://www.mat.uni.torun.pl/~witek/
 
 %description
 cdplayer is simple, non-interactive CD Player for Linux with "Random
@@ -24,7 +24,7 @@ opcj± losowego odgrywania ¶cie¿ek.
 %setup -q
 
 %build
-%{__cc} -o cdplayer cdplayer.c $RPM_OPT_FLAGS
+%{__cc} %{rpmcflags} %{rpmldflags} -o cdplayer cdplayer.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,4 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/cdplayer
 %{_mandir}/man1/*
 %{_mandir}/pl/man1/*
+%dir %{_datadir}/cdplayer
 %{_datadir}/cdplayer/cdplayer.htm
