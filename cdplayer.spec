@@ -1,15 +1,16 @@
-Summary:	Non-interactive CD Player.
-Summary(pl):	Nieinteraktywny odtwarzacz CD.
+Summary:	Non-interactive CD Player
+Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	0.0.96
 Release:	1
 License:	GPL
 Group:		Applications/Sound
+Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-URL:		http://www.mat.uni.torun.pl/~witek
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.tar.bz2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveOS:	Linux
+URL:		http://www.mat.uni.torun.pl/~witek/
 
 %description
 cdplayer is simple, non-interactive CD Player for Linux with "Random
@@ -27,8 +28,8 @@ opcj± losowego odgrywania ¶cie¿ek.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_mandir}/pl/man1}
-install -d $RPM_BUILD_ROOT%{_datadir}/cdplayer
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_mandir}/pl/man1} \
+	$RPM_BUILD_ROOT%{_datadir}/cdplayer
 
 install cdplayer $RPM_BUILD_ROOT%{_bindir}/cdplayer
 install cdplayer.htm $RPM_BUILD_ROOT%{_datadir}/cdplayer/cdplayer.htm
