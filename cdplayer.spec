@@ -7,6 +7,7 @@ Epoch:		2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.tar.bz2
+# Source0-md5:	9efc9a2f9005a8eb7accbcc861322b44
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveOS:	Linux
 
