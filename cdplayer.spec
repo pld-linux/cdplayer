@@ -6,8 +6,6 @@ Release:	1
 Epoch:		2
 License:	GPL
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.tar.bz2
 URL:		http://www.mat.uni.torun.pl/~witek/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
