@@ -2,7 +2,7 @@ Summary:	Non-interactive CD Player
 Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	20020811
-Release:	2
+Release:	3
 Epoch:		2
 License:	GPL
 Group:		Applications/Sound
