@@ -1,0 +1,124 @@
+diff -Nru cdplayer-20020811.orig/cdplayer.1 cdplayer-20020811/cdplayer.1
+--- cdplayer-20020811.orig/cdplayer.1	2002-08-11 17:42:25.000000000 +0200
++++ cdplayer-20020811/cdplayer.1	2005-04-27 17:39:37.325946608 +0200
+@@ -4,42 +4,42 @@
+ audio CDs under Linux with "Random Play" option.
+ .SH SYNOPSIS
+ .B cdplayer
+-[ =F | =La | =Lo | =N | =Pa | =Pr | =R | =S | =<num> ]
++[ -F | -La | -Lo | -N | -Pa | -Pr | -R | -S | -<num> ]
+ .SH OPTIONS
+ .B
+-\=F
++-F
+ autoplay from first track of CD
+ .br
+ .B
+-\=La
++-La
+ play last track of CD
+ .br
+ .B
+-\=Lo
++-Lo
+ play whole CD in loop
+ .br
+ .B
+-\=N
++-N
+ autoplay from next track
+ .br
+ .B
+-\=Pa
++-Pa
+ pause/resume playing
+ .br
+ .B
+-\=Pr
++-Pr
+ autoplay from previous track
+ .br
+ .B
+-\=R
++-R
+ in infinite loop play random tracks of CD
+ .br
+ .B
+-\=S
++-S
+ stop the CD
+ .br
+ .B
+-\=<num>
++-<num>
+ autoplay from <num> track of CD
+ .br
+ .sp
+diff -Nru cdplayer-20020811.orig/cdplayer.c cdplayer-20020811/cdplayer.c
+--- cdplayer-20020811.orig/cdplayer.c	2002-08-11 17:38:18.000000000 +0200
++++ cdplayer-20020811/cdplayer.c	2005-04-27 17:42:54.649948800 +0200
+@@ -169,6 +169,7 @@
+ 		ioctl(drive, CDROMREADTOCHDR, &diskinfo);
+ 		if (argc>1) {
+ 			t = strrchr(argv[1], '=');
++			if (!t) t = strrchr(argv[1], '-');
+ 			if (t) {
+ 			    switch ((char)*++t) {
+ 				case 'F': /* First */
+diff -Nru cdplayer-20020811.orig/pl/cdplayer.1 cdplayer-20020811/pl/cdplayer.1
+--- cdplayer-20020811.orig/pl/cdplayer.1	2002-08-11 17:44:41.000000000 +0200
++++ cdplayer-20020811/pl/cdplayer.1	2005-04-27 17:38:43.093191240 +0200
+@@ -4,43 +4,43 @@
+ CD z opcj± losowego odtwarzania ¶cie¿ek.
+ .SH STRESZCZENIE
+ .B cdplayer
+-[ =F | =La | =Lo | =N | =Pa | =Pr | =R | =S | =<num> ]
++[ -F | -La | -Lo | -N | -Pa | -Pr | -R | -S | -<num> ]
+ .SH OPCJE
+ .br
+ .B
+-\=F
++-F
+ odtwarza ca³± p³ytê.
+ .B
+ .br
+-\=La
++-La
+ odgrywa ostatni± ¶cie¿kê na p³ycie.
+ .B
+ .br
+-\=Lo
++-Lo
+ odtwarza w kó³ko ca³± p³ytê.
+ .B
+ .br
+-\=N
++-N
+ gra od nastêpnej ¶cie¿ki.
+ .B
+ .br	
+-\=Pa
++-Pa
+ zatrzymuje/wznawia odtwarzanie.
+ .B
+ .br
+-\=Pr
++-Pr
+ gra od poprzedniej ¶cie¿ki na p³ycie.
+ .B
+ .br
+-\=R
++-R
+ odgrywa w nieskoñczono¶æ losowe ¶cie¿ki.
+ .B
+ .br
+-\=S
++-S
+ trwale przerywa odtwarzanie z CD.
+ .B
+ .br
+-\=<num>
++-<num>
+ gra od ¶cie¿ki <num>.
+ .br
+ .sp
