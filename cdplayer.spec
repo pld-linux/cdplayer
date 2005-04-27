@@ -2,12 +2,13 @@ Summary:	Non-interactive CD Player
 Summary(pl):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	20020811
-Release:	4
+Release:	5
 Epoch:		2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.tar.bz2
 # Source0-md5:	9efc9a2f9005a8eb7accbcc861322b44
+Patch0:		cdplayer-minus.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveOS:	Linux
 
@@ -21,6 +22,7 @@ opcj± losowego odgrywania ¶cie¿ek lub odrywania ca³ej p³yty w kó³ko.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} -o cdplayer cdplayer.c
