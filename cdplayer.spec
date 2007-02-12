@@ -1,5 +1,5 @@
 Summary:	Non-interactive CD Player
-Summary(pl):	Nieinteraktywny odtwarzacz CD
+Summary(pl.UTF-8):   Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	20020811
 Release:	5
@@ -16,9 +16,9 @@ ExclusiveOS:	Linux
 cdplayer is simple, non-interactive CD Player for Linux with "Random
 Play" and "Loop Play" options.
 
-%description -l pl
-cdplayer to prosty, nieinteraktywny odtwarzacz p≥yt kompaktowych z
-opcj± losowego odgrywania ∂cieøek lub odrywania ca≥ej p≥yty w kÛ≥ko.
+%description -l pl.UTF-8
+cdplayer to prosty, nieinteraktywny odtwarzacz p≈Çyt kompaktowych z
+opcjƒÖ losowego odgrywania ≈õcie≈ºek lub odrywania ca≈Çej p≈Çyty w k√≥≈Çko.
 
 %prep
 %setup -q
