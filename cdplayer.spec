@@ -1,5 +1,5 @@
 Summary:	Non-interactive CD Player
-Summary(pl.UTF-8):   Nieinteraktywny odtwarzacz CD
+Summary(pl.UTF-8):	Nieinteraktywny odtwarzacz CD
 Name:		cdplayer
 Version:	20020811
 Release:	5
